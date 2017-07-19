@@ -18,10 +18,10 @@ extern int nStakeTargetSpacing;
 unsigned int nModifierInterval = MODIFIER_INTERVAL;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic
-static std::map<int, unsigned int> mapStakeModifierCheckpoints =
-    boost::assign::map_list_of
-    (     0, 0xfd11f4e7 )
-	;
+//static std::map<int, unsigned int> mapStakeModifierCheckpoints =
+//    boost::assign::map_list_of
+//    (     0, 0x00590042f7 )
+//	;
 
 // Get the last stake modifier and its generation time from a given block
 static bool GetLastStakeModifier(const CBlockIndex* pindex, uint64& nStakeModifier, int64& nModifierTime)
@@ -398,12 +398,12 @@ unsigned int GetStakeModifierChecksum(const CBlockIndex* pindex)
 }
 
 // Check stake modifier hard checkpoints
-bool CheckStakeModifierCheckpoints(int nHeight, unsigned int nStakeModifierChecksum)
-{
-    if (fTestNet) return true; // Testnet has no checkpoints
-    if (mapStakeModifierCheckpoints.count(nHeight))
-	{
-        return nStakeModifierChecksum == mapStakeModifierCheckpoints[nHeight];
-	}
-    return true;
-}
+//bool CheckStakeModifierCheckpoints(int nHeight, unsigned int nStakeModifierChecksum)
+//{
+//    if (fTestNet) return true; // Testnet has no checkpoints
+//  if (mapStakeModifierCheckpoints.count(nHeight))
+//	{
+//        return nStakeModifierChecksum == mapStakeModifierCheckpoints[nHeight];
+//	}
+//    return true;
+//}
