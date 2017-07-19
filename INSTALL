@@ -1,0 +1,9 @@
+Building TentaniumCoin
+
+See doc/readme-qt.rst for instructions on building TentaniumCoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of TentaniumCoin.
+
+See doc/build-*.txt for instructions on building TentaniumCoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of TentaniumCoin.
